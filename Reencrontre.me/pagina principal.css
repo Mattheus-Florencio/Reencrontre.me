@@ -1,0 +1,332 @@
+/* Reset básico e importação de fontes */
+body, h1, h2, h3, p, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+ 
+}
+
+body{
+   background-color: black;
+
+}
+
+
+/* Estilos do cabeçalho e navegação */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-left: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    height: 12vh;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    .nav-list {
+        position: absolute;
+        top: 12vh;
+        right: 0;
+        width: 100%;
+        height: 88vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+/* Estilos da imagem de fundo e texto */
+.background-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Garante que a imagem cubra o container sem distorcer */
+    display: block;
+   
+}
+
+#principal {
+    color:  white;
+    position: absolute;
+    right: 750px; /* Considera o redimensionamento para manter a posição */
+    width: 40%;
+}
+
+#principal h1 {
+    margin-top: -600px;
+    font-size: 4em; /* Mantém o tamanho para manter a visibilidade ao zoom */
+    font-weight: bold;
+    margin-left: -150px;
+}
+   
+#principal h3 {
+    margin-top: 20px;
+    font-size: 1.3em;
+    margin-left: -150px;
+}
+
+#secundario {
+    position: absolute; /* Posicionamento absoluto para permitir controle exato */
+    color: white; /* Define a cor do texto */
+    width: 40%;
+   margin-left: 170px;
+   
+}
+    
+#secundario h2 {
+    font-size: 1.5em; /* Tamanho do texto */
+    margin-top: -265px; /* Remove a margem superior */
+}
+
+#terciario {
+    position: absolute; /* Posicionamento absoluto para permitir controle exato */
+    left: 200px; /* Início à esquerda */
+    right: 0px; /* Fim à direita */
+    bottom: 0px; /* Mantém uma margem da parte inferior da tela */
+    width: 40%; /* Largura conforme necessário */
+    margin: auto; /* Centraliza horizontalmente dentro do espaço disponível */
+    color: rgb(255, 255, 255); /* Cor do texto */
+}
+    
+#terciario h2 {
+    font-size: 1.5em; /* Tamanho do texto */
+}
+
+/* Contêiner dos botões, com espaçamento e alinhamento centralizado */
+.app-buttons {
+    display: flex; /* Usa Flexbox para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os botões horizontalmente na página */
+    gap: 20px; /* Adiciona um espaço de 20px entre os botões */
+    margin-left: 0px; /* Ajuste o valor conforme necessário */
+    margin-right: 900px; /* Ajuste o valor conforme necessário */
+    margin-top: -200px;
+    
+  
+}
+
+/* Estilo geral para ambos os botões */
+.button {
+    display: inline-flex; /* Configura os botões para usar Flexbox para alinhar imagem e texto */
+    align-items: center; /* Centraliza os itens (imagem e texto) verticalmente */
+    padding: 12px 30px; /* Adiciona padding ao redor do texto e da imagem dentro do botão */
+    font-size: 20px; /* Define o tamanho da fonte do texto */
+    font-weight: normal; /* Torna o texto em negrito */
+    color: white; /* Define a cor do texto para branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    border: 2px solid white; /* Adiciona uma borda branca de 2px */
+    border-radius: 10px; /* Arredonda as bordas do botão */
+    background-image: linear-gradient(to right, #1F83F3, #07326B); /* Gradiente de azul escuro a azul claro */
+    transition: all 0.3s ease; /* Suaviza a transição de estados de hover */
+   
+}
+
+/* Estilo para as imagens dentro dos botões */
+.button img {
+    height: 30px; /* Define a altura da imagem */
+    width: 30px; /* Define a largura da imagem */
+    margin-right: 10px; /* Adiciona margem à direita da imagem para separar do texto */
+   
+}
+
+/* Estilo para o hover dos botões, alterando o gradiente e a cor da borda */
+.button:hover {
+    background-image: linear-gradient(to right, #005fa3, #00b2ff); /* Altera as cores do gradiente para um efeito mais escuro no hover */
+    border-color: #fff; /* Mantém a borda branca no hover */
+    
+}
+
+/* IMAGEM DOIS */
+
+/* Estilos para o novo container */
+.nova-secao {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Permite que o container ajuste sua altura automaticamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Garante que a imagem não saia  do container */
+    margin-top: 0px;
+}
+
+.nova-secao .nova-imagem {
+    width: 100%;
+    height: 100vh; /* Mantém a proporção da imagem */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#imagem2h1 {
+    position: relative; /* Mantém o texto acima da imagem */
+    z-index: 2; /* Coloca o texto acima da imagem */
+    color:  rgb(255, 255, 255);
+    position: absolute;
+    right: 590px; /* Considera o redimensionamento para manter a posição */
+    width: 50%;
+    left: 0px; /* Início à esquerda */
+    margin: auto;
+  
+   
+}
+
+#imagem2h1 h1 {
+    margin-top: -140px;
+    font-size: 2.2em; /* Mantém o tamanho para manter a visibilidade ao zoom */
+    font-weight: bold;
+}
+   
+
+
+
+#imagem2h2 {
+    position: relative; /* Mantém o texto acima da imagem */
+    z-index: 2; /* Coloca o texto acima da imagem */
+    position: absolute; /* Posicionamento absoluto para permitir controle exato */
+    color: rgb(188, 183, 183); /* Define a cor do texto */
+    width: 50%;
+    left: 0px; /* Início à esquerda */
+    right: 590px; /* Fim à direita */
+    margin: auto; /* Centraliza horizontalmente dentro do espaço disponível */
+}
+    
+#imagem2h2 h2 {
+    font-size: 1.5em; /* Tamanho do texto */
+    margin-top: 130px; /* Remove a margem superior */
+}
+
+#imagem3h3 {
+    position: relative; /* Mantém o texto em cima da imagem */
+    z-index: 2; /* Coloca o texto acima da imagem */
+    position: absolute; /* Posicionamento absoluto para permitir controle exato */
+    left: 0px; /* Início à esquerda */
+    right: 740px; /* Fim à direita */
+    bottom: 0px; /* Mantém uma margem da parte inferior da tela */
+    width: 40%; /* Largura conforme necessário */
+    margin: auto; /* Centraliza horizontalmente dentro do espaço disponível */
+    color: rgb(255, 255, 255); /* Cor do texto */
+  
+}
+    
+#imagem3h3 h2 {
+    font-size: 1.5em; /* Tamanho do texto */
+    margin-top: -210px;
+}
+
+#imagemtres{ 
+    display: flex;
+    justify-content: center;
+
+}
+
+#textoelemento {
+   
+  
+    width: 40%; /* Largura conforme necessário */
+    margin-top: -320px;
+    display: flex;
+    justify-content: center;
+    margin-left: 450px;
+    font-size: 1.5em;
+    
+}
+.imagem-propaganda{
+    max-width: 100%;
+    margin-top: 100px;
+}
+
+#textopropaganda{
+    
+   margin-top: -690px;
+    width: 50%; /* Largura conforme necessário */
+    margin-left: 650px;
+    font-size: 1.5em;
+    
+}
+
+#textopropaganda2{
+    
+    margin-top: 60px;
+     width: 50%; /* Largura conforme necessário */
+     margin-left: 650px;
+     font-size: 1.5em;
+     
+ }
+
+ #textopropagandabut{
+    
+    margin-top: 50px;
+     width: 50%; /* Largura conforme necessário */
+     margin-left: 650px;
+    
+ }
+
+ 
+
+
+
+
+
